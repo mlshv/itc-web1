@@ -1,0 +1,36 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+main {
+    width: 780px;
+    margin: 0 auto;
+}
+
+#list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.store-card {
+    flex-basis: 50%;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+    padding-right: 16px;
+}
+
+.store-card__base {
+    display: block;
+    text-decoration: none;
+    color: #222;
+}
+
+.store-card img {
+    width: 100%;
+}
+
+.hidden {
+    display: none!important;
+}
