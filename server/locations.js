@@ -2,7 +2,8 @@ const stores = require('./stores.json');
 
 const response = Object.values(stores).map(({ uuid, location }) => ({
     uuid,
-    location
+    latitude: location.latitude,
+    longitude: location.longitude,
 }));
 
 function locations(req, res) {

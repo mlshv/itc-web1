@@ -1,6 +1,6 @@
-const stores = require('./stores.json');
+const storesData = require('./stores.json');
 
-const response = Object.values(stores).map(
+const response = Object.values(storesData).map(
     ({ title, uuid, link, heroImageUrl, sellsAlcohol, categories }) => ({
         title,
         uuid,
