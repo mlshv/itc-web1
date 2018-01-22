@@ -1,7 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const store = require('./store');
 const stores = require('./stores');
+const locations = require('./locations');
 
 const app = express();
 const apiRouter = express.Router();
@@ -29,7 +31,9 @@ apiRouter
     .get('/', (req, res) => {
         res.json({ message: 'API Initialized!' });
     })
-    .get('/stores', stores);
+    .get('/store', store)
+    .get('/stores', stores)
+    .get('/locations', locations);
 
 app.use(apiRouter);
 
