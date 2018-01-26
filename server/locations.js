@@ -7,7 +7,7 @@ const response = Object.values(stores).map(({ uuid, location }) => ({
 }));
 
 function locations(req, res) {
-    res.send({ payload: { locations: response } });
+    res.send({ payload: response });
 }
 
 module.exports = locations;

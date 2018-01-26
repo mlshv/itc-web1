@@ -8,7 +8,7 @@ function store(req, res) {
         if (store) {
             res.send({
                 payload: {
-                    store
+                    ...store
                 }
             });
         } else {

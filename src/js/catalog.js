@@ -62,7 +62,7 @@ function renderStoresMap() {
     hide('list');
     fetchJSON('locations').then(response => {
         show('mapContainer');
-        const { locations } = response.payload;
+        const locations = response.payload;
         if (!yaMap) {
             yaMap = new ymaps.Map('map', {
                 center: [55.76, 37.62],
