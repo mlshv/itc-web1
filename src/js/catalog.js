@@ -1,17 +1,3 @@
-function objectToQueryString(object) {
-    return Object.keys(object)
-        .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(object[k])}`)
-        .join('&');
-}
-
-function fetchJSON(endpoint, params) {
-    const paramsString = params ? objectToQueryString(params) : '';
-    const paramsQuery = paramsString ? '?' + paramsString : '';
-    return fetch('http://localhost:3001/' + endpoint + paramsQuery).then(
-        response => response.json()
-    );
-}
-
 function show(elemId) {
     var elem = document.querySelector(`#${elemId}`);
     if (elem) {
@@ -26,10 +12,10 @@ function hide(elemId) {
     }
 }
 
-function renderMarketplaceCard({ title, heroImageUrl, link }) {
+function renderMarketplaceCard({ uuid, title, heroImageUrl }) {
     const card = `
         <div class="store-card">
-            <a class="store-card__base" href="${link}">
+            <a class="store-card__base" href="store.html?uuid=${uuid}">
                 <img src="${heroImageUrl}">
                 <h3>${title}</h3>
             </a>
