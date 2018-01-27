@@ -1,3 +1,9 @@
+function load() {
+    return new Promise(function(resolve, reject) {
+        window.onload = resolve;
+    });
+}
+
 function getQueryParams() {
     var qd = {};
     if (location.search)

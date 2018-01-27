@@ -1,3 +1,22 @@
 #imageContainer img {
     width: 100%;
 }
+
+.meal-card {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+    padding: 20px;
+    border: 1px solid #333;
+}
+
+.meal-card__title {
+    margin-top: 0;
+}
+
+.meal-card__image {
+    margin-left: 20px;
+    align-self: center;
+    flex: 0 0 auto;
+    width: 300px;
+}

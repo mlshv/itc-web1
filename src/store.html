@@ -9,11 +9,30 @@
 <body>
     <main>
         <h1>Delivery Club</h1>
-        <h2 id="storeName">Загрузка...</h2>
+        <a href="catalog.html">Каталог</a>
         <div id="imageContainer"></div>
+        <h2 id="storeName">Загрузка...</h2>
+        <div id="categories"></div>
+        <div>
+            Время доставки:
+            <span id="deliveryTime"></span>
+        </div>
+        <div>
+            Уровень цен:
+            <span id="prices"></span>
+        </div>
+        <div>
+            Алкоголь? - 
+            <span id="sellsAlcohol"></span>
+        </div>
+        <h2>На карте</h2>
+        <div id="map" style="width: 600px; height: 400px"></div>
+        <h2>Меню</h2>
+        <div id="menu"></div>
     </main>
     <script src="js/common.js"></script>
     <script src="js/store.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </body>
 
 </html>

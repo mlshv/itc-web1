@@ -35,7 +35,7 @@ function renderStoresList() {
 }
 
 function addPlacemark(map, coodrinates, title) {
-    var placemark = new ymaps.Placemark(coodrinates, {
+    const placemark = new ymaps.Placemark(coodrinates, {
         hintContent: title,
         balloonContent: title
     });
@@ -43,7 +43,7 @@ function addPlacemark(map, coodrinates, title) {
     map.geoObjects.add(placemark);
 }
 
-var yaMap;
+let yaMap;
 function renderStoresMap() {
     hide('list');
     fetchJSON('locations').then(response => {
@@ -66,3 +66,5 @@ function renderStoresMap() {
         });
     });
 }
+
+renderStoresList();
