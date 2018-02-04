@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const auth = require('./auth');
 const store = require('./store');
 const stores = require('./stores');
 const locations = require('./locations');
@@ -11,6 +12,8 @@ const port = 3001;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+auth(app);
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -33,7 +36,11 @@ apiRouter
     })
     .get('/store', store)
     .get('/stores', stores)
-    .get('/locations', locations);
+    .get('/locations', locations)
+    .post('/auth', auth.authenticate, (req, res) => res.json({ success: true }))
+    .get('/orders', auth.protectRoute, (req, res) =>
+        res.json({ success: true })
+    );
 
 app.use(apiRouter);
 
