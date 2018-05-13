@@ -5,6 +5,9 @@
     "author": "mlshv",
     "license": "MIT",
     "private": true,
+    "scripts": {
+        "start": "node index.js"
+    },
     "dependencies": {
         "body-parser": "^1.18.2",
         "connect-redis": "^3.3.3",
