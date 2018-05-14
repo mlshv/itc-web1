@@ -1,13 +1,15 @@
 const storesData = require('./stores.json');
 
 const response = Object.values(storesData).map(
-    ({ title, uuid, link, heroImageUrl, sellsAlcohol, categories }) => ({
+    ({ title, uuid, link, heroImageUrl, sellsAlcohol, categories, etaRange, priceBucket }) => ({
         title,
         uuid,
         link,
         heroImageUrl,
         sellsAlcohol,
-        categories
+        categories,
+        etaRange,
+        priceBucket
     })
 );
 
